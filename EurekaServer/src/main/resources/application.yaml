@@ -1,0 +1,12 @@
+server:
+  port: 8761
+  base-url: http://local.payzer.com:8082/
+
+spring:
+  application:
+    name: payzer-service-discovery
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

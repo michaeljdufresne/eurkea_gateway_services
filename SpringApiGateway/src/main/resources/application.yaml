@@ -1,0 +1,38 @@
+server:
+  port: 8089
+  base-url: http://local.payzer.com:8081/
+
+spring:
+  application:
+    name: payzer-api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: 'true'
+          lower-case-service-id: 'true'
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://service-discovery:8761/eureka/
+  instance:
+    preferIpAddress: true
+
+zuul:
+  host:
+    connect-timeout-millis: 5000000
+    socket-timeout-millis: 5000000
+#  routes:
+#    leads-service:
+#      path: /leads-service/**
+#      serviceId: leads-service
+#      stripPrefix: true
+#    zuul-service:
+#      path: /zuulservice/**
+#      serviceId: zuul-service
+#      stripPrefix: true
+
+
