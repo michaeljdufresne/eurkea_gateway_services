@@ -11,7 +11,7 @@ services:
       - payzer-local
     build:
       context: .
-      dockerfile: ./EurekaServer/Dockerfile
+      dockerfile: ./EurekaServer/Dockerfile.local
     volumes:
       - ./:/app
     ports:
@@ -21,7 +21,7 @@ services:
       - payzer-local
     build:
       context: .
-      dockerfile: ./SpringApiGateway/Dockerfile
+      dockerfile: ./SpringApiGateway/Dockerfile.local
     volumes:
       - ./:/app
     ports:
