@@ -28,19 +28,3 @@ eureka:
       defaultZone: http://service-discovery:8761/eureka/
   instance:
     preferIpAddress: true
-
-zuul:
-  host:
-    connect-timeout-millis: 5000000
-    socket-timeout-millis: 5000000
-#  routes:
-#    leads-service:
-#      path: /leads-service/**
-#      serviceId: leads-service
-#      stripPrefix: true
-#    zuul-service:
-#      path: /zuulservice/**
-#      serviceId: zuul-service
-#      stripPrefix: true
-
-
