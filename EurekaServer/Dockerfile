@@ -1,16 +1,16 @@
-FROM openjdk:17-oraclelinux8
+FROM amazoncorretto:17
 
 # Install updates
-RUN microdnf update -y
+RUN yum update -y
 
 # Install some deps
-RUN microdnf install unzip wget -y
+RUN yum install unzip wget -y
 
 # Install Maven
-RUN wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz && \
-    tar xzvf apache-maven-3.8.6-bin.tar.gz && \
+RUN wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.zip && \
+    unzip apache-maven-3.8.6-bin.zip && \
     mv apache-maven-3.8.6 /opt/ && \
-    rm -f apache-maven-3.8.6-bin.tar.gz
+    rm -f apache-maven-3.8.6-bin.zip
 
 ENV PATH=/opt/apache-maven-3.8.6/bin:$PATH
 
