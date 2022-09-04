@@ -8,12 +8,12 @@
 		<version>2.7.1</version>
 	</parent>
 
-	<groupId>com.payzer</groupId>
+	<groupId>com.michaeljdufresne</groupId>
 	<artifactId>service-discovery</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>Payzer Service Discovery</name>
-	<description>Payzer Service Discovery - Eureka</description>
+	<name>Service Discovery</name>
+	<description>Service Discovery - Eureka</description>
 
 	<properties>
 		<java.version>17</java.version>

@@ -1,14 +1,14 @@
 version: '3.7'
 
 networks:
-  payzer-local:
-    name: payzer-local
+  local:
+    name: local
     external: true
 
 services:
   service-discovery:
     networks:
-      - payzer-local
+      - local
     build:
       context: .
       dockerfile: ./EurekaServer/Dockerfile.local
@@ -18,7 +18,7 @@ services:
       - 8082:8761
   api-gateway:
     networks:
-      - payzer-local
+      - local
     build:
       context: .
       dockerfile: ./SpringApiGateway/Dockerfile.local

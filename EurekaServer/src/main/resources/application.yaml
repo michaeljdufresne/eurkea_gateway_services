@@ -1,10 +1,10 @@
 server:
   port: 8761
-  base-url: http://local.payzer.com:8082/
+  base-url: http://local.michaeljdufresne.com:8082/
 
 spring:
   application:
-    name: payzer-service-discovery
+    name: service-discovery
 
 eureka:
   client:
